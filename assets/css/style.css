@@ -284,6 +284,10 @@ section {
     display: flex;
 }
 
+.title-row {
+    display: flex;
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
     /* this will be applied on any screen smaller than 980px */
@@ -306,31 +310,25 @@ section {
     
     header nav ul li a {
         font-size: 20px;
-    }
-    
-    footer h2, footer div {
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero-cta, .hero-form {
-        width: 100%;
+        border-bottom: 0;
     }
       
-    .hero-cta {
-        text-align: center;
+    .title-row {
+        width: 100%;
     }
 
     .section-title {
+        display: block;
         width: 80%;
+        float: 0 70%;
     }
       
     .trainer {
         flex: 0 70%;
     }
       
-    .contact-info iframe{
-        flex: 1 100%;
+    .contact-info ul li a {
+        border-bottom: 0;
     }
 }
 
@@ -347,7 +345,7 @@ section {
     }
 
     .step-info {
-        flex: 2 100%;
+        display: inline-table;
         text-align: center;
         justify-content: center;
     }
@@ -363,19 +361,19 @@ section {
         flex: 100%;
     }
 
-    .service-grid-container {
+    .work-grid-container {
         grid-template-columns: 1fr 1fr;
     }
     
-    .service-grid-item.basic {
-        grid-column: 1;
-    }
-    
-    .service-grid-item.both {
+    .work-grid-item.run-buddy {
         grid-column: 1 / -1;
     }
     
-    .service-grid-item.cancel {
+    .work-grid-item.horiseon {
+        grid-column: 1 / -1;
+    }
+    
+    .work-grid-item.placeholder {
         transform: none;
         writing-mode: unset;
         grid-column: 1 / -1;
@@ -394,14 +392,17 @@ section {
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     /* this will be applied on any screen smaller than 575px */
-    .hero-form button {
-        width: 100%;
-    }
+    
     
     .section-title {
-        width: 95%;
+        font-size: smaller;
     }
-    
+
+    .resume-link a {
+        font-size: smaller;
+    }
+
+
     .intro p {
         width: 100%;
     }
