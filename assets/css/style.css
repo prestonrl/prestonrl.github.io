@@ -58,7 +58,7 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-  }
+}
 
 header nav ul li a {
     padding: 10px 15px;
@@ -118,7 +118,6 @@ header nav ul li a:hover {
     width: 80%;
     font-size: 20px;
     padding: 20px;
-    margin: 15px;
     text-align: justify;
     border-left: 3px solid;
 }
@@ -285,7 +284,8 @@ section {
 }
 
 .title-row {
-    display: flex;
+    margin-left: 5%;
+    
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -323,10 +323,6 @@ section {
         float: 0 70%;
     }
       
-    .trainer {
-        flex: 0 70%;
-    }
-      
     .contact-info ul li a {
         border-bottom: 0;
     }
@@ -337,28 +333,6 @@ section {
     /* this will be applied on any screen between 768px and 575px */
     section {
         padding: 30px 15px;      
-    }
-
-    .step h3 {
-        flex: 1 100%;
-        text-align: center;
-    }
-
-    .step-info {
-        display: inline-table;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .step-img {
-        flex: 0 32%;
-        margin-right: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .step-text {
-        flex: 100%;
     }
 
     .work-grid-container {
@@ -379,20 +353,11 @@ section {
         grid-column: 1 / -1;
         grid-row: -1;
     }
-
-    .trainer-img h3, .trainer-img h4, .trainer-img::after {
-        display: none;
-    }
-
-    .trainer-bio h3, .trainer-bio h4 {
-        display: block;
-    }
 }
   
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     /* this will be applied on any screen smaller than 575px */
-    
     
     .section-title {
         font-size: smaller;
@@ -402,24 +367,8 @@ section {
         font-size: smaller;
     }
 
-
-    .intro p {
-        width: 100%;
+    .contact-info ul li a {
+        font-size: large;
     }
     
-    .trainer {
-        flex: 0 100%;
-    }
-    
-    .contact-info {
-        text-align: center;
-    }
-    
-    .contact-info > * {
-        flex: 0 100%;
-    }
-
-    .contact-form {
-        order: 3;
-    }
 }
