@@ -139,6 +139,10 @@ section {
     display: flex;
 }
 
+.work div h2 {
+    text-align: right;
+}
+
 /* grid */
 .work-wrapper {
     border-left: 3px solid;
@@ -167,6 +171,7 @@ section {
     height: 150px;
     border: solid 3px var(--secondary-color);
     position: relative;
+    cursor: pointer;
 }
 
 .work-grid-item::after {
@@ -204,6 +209,9 @@ section {
     height: 300px;
 }
 
+.work-grid-item:hover .work-grid-item {
+    border: solid 50px black;
+}
 .run-buddy {
     background-image: url("../images/run-buddy-img.PNG");
     background-size: cover;
@@ -236,68 +244,38 @@ section {
     border-left: 3px solid;
 }
 
-.steps {
-    background: var(--primary-color);
+.contact-info a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
-.steps h2 {
-    font-size: 55px;
-    color: var(--secondary-color);
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid;
-    border-color:var(--tertiary-color);
+.contact-info {
+    margin: 25px 0;
+    padding: 25px;
 }
 
-.step {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
+.contact-info ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-}
-
-.step-info {
-    flex: 2 70%;
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    list-style: none;
+  }
+
+.contact-info ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid;
+    margin: 10px;
 }
 
-.step h3 {
+.contact-info ul li a:hover {
+    background: var(--primary-color);
     color: var(--secondary-color);
-    font-size: 46px;
-    flex: 1 30%;
-}
-
-.step-text h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: var(--secondary-color);
-}
-
-.step-text p {
-    color:var(--tertiary-color);
-    font-size: 18px;
-}
-
-.step-img {
-    flex: 1 12%;
-    margin-right: 20px;
-}
-
-.step-text {
-    flex: 12;
-}
-
-.step-img img {
-    max-width: 100%;
-}
-
-.step:not(:last-child){
-    border-bottom: 1px solidvar(--tertiary-color);
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 .section-title {
@@ -313,76 +291,6 @@ section {
     border-color: var(--primary-color);
 }
 
-.trainers {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.trainer {
-    margin: 20px;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    flex: 1;
-    
-}
-
-.trainer-img {
-    width: 100%;
-    min-height: 300px;
-    display: flex;
-    padding: 15px;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-}
-
-.trainer-img::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(rgba(252, 225, 56, 0.3), var(--secondary-color));
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.trainer:hover .trainer-img::after {
-    opacity: 1;
-}
-
-.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
-    top: 0px;
-    opacity: 1;
-}
-
-.trainer-img h3 {
-  position: relative;
-  z-index: 9997;
-  font-size: 28px;
-  margin-bottom: 5px;
-  top: 200px;
-  transition: 0.6s;
-}
-
-.trainer-img h4 {
-  position: relative;
-  z-index: 9998;
-  font-size: 22px;
-  font-weight: lighter;
-  top: 200px;
-  transition: 0.6s;
-  transition-delay: 0.2s;
-}
-
-.trainer-bio {
-    padding: 25px;
-    line-height: 1.3;
-}
 
 .text-left {
     text-align: left;
@@ -390,48 +298,6 @@ section {
 
 .text-right {
     text-align: right;
-}
-
-.trainer-bio h3 {
-    font-size: 28px;
-    display: none;
-
-}
-
-.trainer-bio h4 {
-    font-weight: lighter;
-    font-size: 22px;
-    margin-bottom: 15px;
-    display: none;
-}
-
-.trainer-bio p {
-    font-size: 17px;
-}
-
-.trainer-1 {
-    background-image: url("../images/trainer-1.jpg");
-    background-size: cover;
-}
-
-.trainer-2 {
-    background-image: url("../images/trainer-2.jpg");
-    background-size: cover;
-}
-
-.trainer-3 {
-    background-image: url("../images/trainer-3.jpg");
-    background-size: cover;
-}
-
-.page-title {
-    color: var(--primary-color);    
-    font-weight: normal;
-    font-size: 42px;
-    font-style: italic;
-    display: inline-block;
-    border-bottom: 4px solid var(--primary-color);
-    padding: 0 80px 15px 80px;
 }
 
 .flex-row {
