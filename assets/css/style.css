@@ -133,6 +133,54 @@ section {
     text-align: justify;
     border-left: 3px solid;
 }
+/*end about me*/
+
+/* my work section */
+.work   {
+    display: flex;
+}
+
+/* grid */
+.work-wrapper {
+    border-left: 3px solid;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.work-grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    border: 2px solid var(--secondary-color);
+    color:  var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.work-grid-item {
+    padding: 15px 0;
+    border: 2px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.work-grid-item.basic {
+    grid-column: 2 / span 1;
+}
+
+.work-grid-item.both {
+    grid-column: 2 / span 2;
+}
+
+.work-grid-item.cancel {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
 
 .steps {
     background: var(--primary-color);
@@ -320,59 +368,6 @@ section {
 .trainer-3 {
     background-image: url("../images/trainer-3.jpg");
     background-size: cover;
-}
-
-/* SERVICE STYLES BEGIN */
-.services {
-    background: var(--primary-color);
-}
-
-.service-grid-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.service-grid-container {
-    background: lightyellow;
-    width: 80%;
-    display: grid;
-    /* repeat(iterator, size) */
-    grid-template-columns: 1fr repeat(2, 4fr);
-    grid-template-rows: repeat(5, 1fr) 2fr;
-    border: 2px solid var(--secondary-color);
-    color:  var(--secondary-color);
-    font-size: 1.2rem;
-}
-
-.service-grid-item {
-    padding: 15px 0;
-    border: 2px solid var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* specific match */
-.service-grid-item.basic {
-    grid-column: 2 / span 1;
-}
-
-.service-grid-item.both {
-    grid-column: 2 / span 2;
-}
-
-.service-grid-item.cancel {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    grid-column: 1;
-    grid-row: 1 / -1;
-}
-
-.grid-head, .grid-price, .service-grid-item.cancel {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .contact {
