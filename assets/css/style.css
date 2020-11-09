@@ -13,6 +13,7 @@
 body {
     color:var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--primary-color);
 }
 /* Header Styles */
 header {
@@ -276,6 +277,14 @@ section {
     color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
+}
+
+/*ennd contact info */
+
+/*resume*/
+
+.resume {
+    background-color: var(--tertiary-color);
 }
 
 .section-title {
