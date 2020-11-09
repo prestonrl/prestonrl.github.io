@@ -77,10 +77,6 @@ header nav ul li a:hover {
 }
 /*header end */
 
-section {
-    padding: 25px;
-}
-
 /* Hero Style Start */
 .hero {
     background-image: url("../images/IMG_9640a.JPG");
@@ -103,7 +99,7 @@ section {
     color: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(43,106,139, .7);
+    background-color: rgba(43,106,139, 0.7);
     border-radius: 10px;
     position: absolute;
     bottom: 0;
@@ -115,15 +111,8 @@ section {
 /* Hero Style End */
 
 /*aboutme section*/
-.about {
-    display: flex;
-}
 
-.about div h2 {
-    text-align: right;
-}
-
-.about p {
+.flex-row p {
     line-height: 1.7;
     color:var(--tertiary-color);
     width: 80%;
@@ -135,16 +124,7 @@ section {
 }
 /*end about me*/
 
-/* my work section */
-.work   {
-    display: flex;
-}
-
-.work div h2 {
-    text-align: right;
-}
-
-/* grid */
+/* my work section and grid*/
 .work-wrapper {
     border-left: 3px solid;
     display: flex;
@@ -227,27 +207,16 @@ section {
     background-image: url("../images/placeholder-img.PNG");
     background-size: cover;
 }
-
-
-
 /*end grid and work section*/
 
 /*contact section*/
-.contact {
-    display: flex;
-}
-
-.contact div h2 {
-    text-align: right;
-}
-
 .contact-info {
     border-left: 3px solid;
 }
 
 .contact-info a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .contact-info {
@@ -279,34 +248,36 @@ section {
     text-shadow: none;
 }
 
-/*ennd contact info */
+/*end contact info */
 
 /*resume*/
 
 .resume {
     background-color: var(--tertiary-color);
+    display: flex;
 }
+
+.resume-link {
+    margin: 0 auto 5px auto;
+}
+
+.resume-link a {
+    font-size: 48px;
+    color: var(--secondary-color);
+    padding: 10px;
+}
+/*general*/
 
 .section-title {
     font-size: 48px;
     color: var(--secondary-color);
     text-align: right;
-    margin: 0 auto 35px auto;
     padding: 20px;
-    
-}
-  
-.section-border {
-    border-color: var(--primary-color);
 }
 
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
+section {
+    padding: 25px;
+    display: flex;
 }
 
 .flex-row {
