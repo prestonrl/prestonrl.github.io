@@ -7,7 +7,7 @@
 :root {
     --primary-color: rgb(221, 221, 221);
     --secondary-color: #2b6a8b;
-    --tertiary-color: #39a6b2;
+    --tertiary-color: #09474e;
   }
 
 body {
@@ -24,7 +24,6 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-image: url("../images/IMG_9640a.JPG");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -156,6 +155,7 @@ section {
     color:  var(--secondary-color);
     font-size: 1.2rem;
     grid-gap: 20px;
+    position: relative;
 }
 
 .work-grid-item {
@@ -167,6 +167,22 @@ section {
     height: 150px;
     border: solid 3px var(--secondary-color);
     position: relative;
+}
+
+.work-grid-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(252, 225, 56, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.work-grid-container:hover .work-grid-item::after {
+    opacity: 0.7;
+    transition: all 0.5s;
 }
 
 .work-grid-item div {
@@ -188,10 +204,6 @@ section {
     height: 300px;
 }
 
-.work-grid-item.both {
-    grid-column: 2 / span 2;
-}
-
 .run-buddy {
     background-image: url("../images/run-buddy-img.PNG");
     background-size: cover;
@@ -207,8 +219,22 @@ section {
     background-size: cover;
 }
 
+
+
 /*end grid and work section*/
 
+/*contact section*/
+.contact {
+    display: flex;
+}
+
+.contact div h2 {
+    text-align: right;
+}
+
+.contact-info {
+    border-left: 3px solid;
+}
 
 .steps {
     background: var(--primary-color);
@@ -396,83 +422,6 @@ section {
 .trainer-3 {
     background-image: url("../images/trainer-3.jpg");
     background-size: cover;
-}
-
-.contact {
-    background: var(--secondary-color);
-}
-
-.contact h2 {
-    color: var(--primary-color);
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact-info iframe {
-    height: 400px;
-}
-
-.contact-info div {
-    color: white;
-}
-
-.contact-info h3 {
-    color: var(--primary-color);
-    font-size: 32px;
-}
-
-.contact-info p, .contact-info address {
-    margin: 20px 0;
-    line-height: 1.5;
-    font-size: 16px;
-    font-style: normal;
-}
-
-.contact-info a {
-    color: var(--primary-color);
-}
-
-.contact-info > * {
-    float: 1;
-    margin: 15px;
-}
-
-.contact-form input, .contact-form textarea {
-    border: 1px solid var(--secondary-color);
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: var(--secondary-color);
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: rgba(255,255,255, 0.75);
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255,255,255, 1);
-    outline: none;
-}
-
-.contact-form button {
-    width: 100%;
-    border: none;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-    border-radius: 10px;
-}
-
-.contact-form button:hover {
-    color: var(--primary-color);
-    background:var(--tertiary-color);
 }
 
 .page-title {
