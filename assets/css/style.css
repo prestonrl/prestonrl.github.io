@@ -352,20 +352,31 @@ section {
         font-size: 35px;
     }
 
+    .flex-row p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info ul li a {
+        font-size: larger;
+        padding: 10px;
+    }
+
 }
   
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     /* this will be applied on any screen smaller than 575px */
     
-    
+    .contact-info ul {
+        display: inline;
+        line-height: 45px;
+    }
 
     .resume-link a {
         font-size: larger;
     }
 
-    .contact-info ul li a {
-        font-size: large;
-    }
+
     
 }
