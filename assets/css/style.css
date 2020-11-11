@@ -119,13 +119,11 @@ header nav ul li a:hover {
     font-size: 20px;
     padding: 20px;
     text-align: justify;
-    border-left: 3px solid;
 }
 /*end about me*/
 
 /* my work section and grid*/
 .work-wrapper {
-    border-left: 3px solid;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -210,7 +208,7 @@ header nav ul li a:hover {
 
 /*contact section*/
 .contact-info {
-    border-left: 3px solid;
+
 }
 
 .contact-info a {
@@ -274,6 +272,10 @@ header nav ul li a:hover {
     padding: 20px;
 }
 
+.title-row {
+    border-right: 3px solid;
+}
+
 section {
     padding: 25px;
     display: flex;
@@ -318,7 +320,7 @@ section {
 @media screen and (max-width: 768px) {
     /* this will be applied on any screen between 768px and 575px */
     section {
-        padding: 30px 15px;      
+        display: block;     
     }
 
     .work-grid-container {
@@ -339,18 +341,27 @@ section {
         grid-column: 1 / -1;
         grid-row: -1;
     }
+
+    .title-row {
+        border-right: 0;
+        border-bottom: 3px solid;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 35px;
+    }
+
 }
   
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     /* this will be applied on any screen smaller than 575px */
     
-    .section-title {
-        font-size: smaller;
-    }
+    
 
     .resume-link a {
-        font-size: smaller;
+        font-size: larger;
     }
 
     .contact-info ul li a {
